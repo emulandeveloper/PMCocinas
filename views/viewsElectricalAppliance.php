@@ -56,25 +56,142 @@
             </div>
         </nav>
         <!-- Services Section -->
-        <div id="services">
+        <div id="modal portfolio">
             <div class="container">
-                <div class="col-md-10 col-md-offset-1 section-title text-center">
-                    <h2>Cocinas y Armários</h2>
+                <div class="section-title text-center center">
+                    <h2>Electrodomésticos</h2>
                     <hr>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
                 </div>
+                <div class="categories">
+                    <ul class="cat">
+                        <li>
+                            <ol class="type">
+                                <li><a href="#" data-filter="*" class="active">Todos los proyectos</a></li>
+                                <li><a href="#" data-filter=".cocinas">Cocinas</a></li>
+                                <li><a href="#" data-filter=".office">Armarios</a></li>
+                                <li><a href="#" data-filter=".commercial">Otros</a></li>
+                                <li><a href="#" data-filter=".cocinas">Cocinas</a></li>
+                                <li><a href="#" data-filter=".office">Armarios</a></li>
+                                <li><a href="#" data-filter=".commercial">Otros</a></li>
+                                <li><a href="#" data-filter=".cocinas">Cocinas</a></li>
+                                <li><a href="#" data-filter=".office">Armarios</a></li>
+                                <li><a href="#" data-filter=".commercial">Otros</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-4 service"><a href=""> <img src="../img/residential-design.jpg" class="img-responsive" alt="Project Title">
-                        <h3>Cocinas y Armários</h3></a>
-                        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 service"><a href=""> <img src="../img/office-design.jpg" class="img-responsive" alt="Project Title">
-                            <h3>Electrodomésticos</h3></a>
-                        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 service"><a href=""> <img src="../img/commercial-design.jpg" class="img-responsive" alt="Project Title">
-                            <h3>Revitalización Agua Grander</h3></a>
-                        <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
+                    <div class="portfolio-items">
+                        <div class="col-sm-6 col-md-4 col-lg-4 cocinas">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a href="../img/portfolio/01-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>COCINAS</h4>
+                                        </div>
+                                        <img src="../img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-4 commercial">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a href="../img/portfolio/02-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Project Name</h4>
+                                        </div>
+                                        <img src="../img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-4 residential">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a href="../img/portfolio/03-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Project Name</h4>
+                                        </div>
+                                        <img src="../img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-4 residential">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a href="../img/portfolio/04-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Project Name</h4>
+                                        </div>
+                                        <img src="../img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-4 commercial">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a href="../img/portfolio/05-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Project Name</h4>
+                                        </div>
+                                        <img src="../img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-4 office">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a href="../img/portfolio/06-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Project Name</h4>
+                                        </div>
+                                        <img src="../img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-4 office">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a href="../img/portfolio/07-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Project Name</h4>
+                                        </div>
+                                        <img src="../img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-4 residential">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a href="../img/portfolio/08-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Project Name</h4>
+                                        </div>
+                                        <img src="../img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-4 commercial">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a href="../img/portfolio/09-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Project Name</h4>
+                                        </div>
+                                        <img src="../img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-4 office">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a href="../img/portfolio/10-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Project Name</h4>
+                                        </div>
+                                        <img src="../img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-4 office">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a href="../img/portfolio/11-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Project Name</h4>
+                                        </div>
+                                        <img src="../img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-4 residential">
+                            <div class="portfolio-item">
+                                <div class="hover-bg"> <a href="../img/portfolio/12-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                        <div class="hover-text">
+                                            <h4>Project Name</h4>
+                                        </div>
+                                        <img src="../img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,7 +208,7 @@
                     <h3>Contact Info</h3>
                     <div class="contact-item"> <span>Dirección</span>
                         <p>Calle Vespasiano, 1<br>Mérida (Badajoz)
-                            </p>
+                        </p>
                     </div>
                     <div class="contact-item"> <span>Correo</span>
                         <p>contacto</p>

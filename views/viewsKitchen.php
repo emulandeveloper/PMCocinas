@@ -7,8 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <!-- Favicons
-            ================================================== -->
+        <!-- Favicons ================================================== -->
         <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
         <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
         <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
@@ -18,8 +17,7 @@
         <link rel="stylesheet" type="text/css"  href="../css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.css">
 
-        <!-- Stylesheet
-            ================================================== -->
+        <!-- Stylesheet ================================================== -->
         <link rel="stylesheet" type="text/css"  href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/nivo-lightbox/nivo-lightbox.css">
         <link rel="stylesheet" type="text/css" href="../css/nivo-lightbox/default.css">
@@ -65,18 +63,20 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
                 </div>
                 <div class="row" style="padding: 150px">
-                    <div class="col-xs-12 col-md-12 service" style="padding: 25px"><img src="../img/cocinas.jpg" class="col-md-6 imagen img-responsive" alt="Project Title">
+                    <div class="col-xs-12 col-md-12 service" style="padding: 25px"><a href="../#portfolio"><img src="../img/cocinas.jpg" class="col-md-6 imagen img-responsive" alt="Project Title">
                         <div class="col-md-1"></div>
                         <div class="col-md-5">
-                            <h3>Cocinas</h3>
-                            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
+                            <h3>Cocinas</h3></a>
+                            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. 
+                                Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-12 service" style="padding: 25px"><img src="../img/armario.jpg" class="col-md-6 imagen img-responsive" alt="Project Title">
+                    <div class="col-xs-12 col-md-12 service" style="padding: 25px"><a href="../#portfolio"><img src="../img/armario.jpg" class="col-md-6 imagen img-responsive" alt="Project Title">
                         <div class="col-md-1"></div>
                         <div class="col-md-5">
-                            <h3>Armarios</h3>
-                            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
+                            <h3>Armarios</h3></a>
+                            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. 
+                                Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
                         </div>
                     </div>
                 </div>

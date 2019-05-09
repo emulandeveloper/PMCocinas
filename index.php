@@ -48,7 +48,6 @@
                         <li><a href="#about" class="page-scroll">About</a></li>
                         <li><a href="#services" class="page-scroll">Services</a></li>
                         <li><a href="#portfolio" class="page-scroll">Projects</a></li>
-                        <li><a href="#team" class="page-scroll">Team</a></li>
                         <li><a href="#contact" class="page-scroll">Contact</a></li>
                     </ul>
                 </div>
@@ -62,9 +61,9 @@
                     <div class="container">
                         <div class="row">
                             <div class="intro-text" style="float: left;">
-                                <img class="img-responsive center-block" src="img/logo_prin.png">
                                 <h1><img src="img/tituloLogo.png"></h1>
-                                <a href="#about" class="btn btn-custom btn-lg page-scroll">Proyectos</a> </div>
+                                <a href="#about" class="btn btn-custom btn-lg page-scroll">Proyectos</a> 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -74,11 +73,11 @@
         <div id="about">
             <div class="container">
                 <div class="section-title text-center center">
-                    <h2>Our Story</h2>
+                    <h2>Nuestra Historia</h2>
                     <hr>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 col-md-6 text-center"> <img src="img/about.jpg" class="img-responsive" alt=""> </div>
+                    <div class="col-xs-12 col-md-6"> <img src="img/about.jpg" class="img-responsive" alt=""> </div>
                     <div class="col-xs-12 col-md-6">
                         <div class="about-text">
                             <h3>The Studio</h3>
@@ -126,10 +125,10 @@
                     <ul class="cat">
                         <li>
                             <ol class="type">
-                                <li><a href="#" data-filter="*" class="active">All Projects</a></li>
-                                <li><a href="#" data-filter=".residential">Residential</a></li>
-                                <li><a href="#" data-filter=".office">Office</a></li>
-                                <li><a href="#" data-filter=".commercial">Commercial</a></li>
+                                <li><a href="#" data-filter="*" class="active">Todos los proyectos</a></li>
+                                <li><a href="#" data-filter=".cocinas">Cocinas</a></li>
+                                <li><a href="#" data-filter=".office">Armarios</a></li>
+                                <li><a href="#" data-filter=".commercial">Otros</a></li>
                             </ol>
                         </li>
                     </ul>
@@ -137,11 +136,11 @@
                 </div>
                 <div class="row">
                     <div class="portfolio-items">
-                        <div class="col-sm-6 col-md-4 col-lg-4 residential">
+                        <div class="col-sm-6 col-md-4 col-lg-4 cocinas">
                             <div class="portfolio-item">
                                 <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                         <div class="hover-text">
-                                            <h4>Project Name</h4>
+                                            <h4>COCINAS</h4>
                                         </div>
                                         <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
                             </div>

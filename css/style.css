@@ -107,7 +107,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 #menu.navbar-default .navbar-nav > li > a {
     text-transform: uppercase;
-    color: #777;
+    color: #293133;
     font-weight: 500;
     font-size: 15px;
     padding: 5px 0;
@@ -116,10 +116,10 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     margin: 10px 15px 0 15px;
 }
 #menu.navbar-default .navbar-nav > li > a:hover {
-    color: #eee;
+    color: #FFF;
 }
 .on {
-    background-color: #293133 !important;
+    background-color: #A7c44c !important;
     padding: 0 !important;
     padding: 10px 0 !important;
 }
@@ -147,7 +147,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     text-transform: uppercase;
     color: #fff;
     text-shadow: 0 0 3px #859c3c;
-    background-color: #293133;
+    background-color: #2B3344;
     border: 0;
     padding: 14px 20px;
     margin: 0;
@@ -166,7 +166,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     width: 100%;
     margin-top: 70px;
     padding: 0;
-    background: url(../img/intro-bg.jpg) no-repeat center bottom;
+    background: url(../img/cocina_portada.jpg) no-repeat center bottom;
     background-color: #e5e5e5;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -196,8 +196,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
     margin-bottom: 40px;
 }
 header .intro-text {
-    padding-top: 300px;
-    padding-bottom: 200px;
+    padding-top: 330px;
+    padding-bottom: 370px;
     text-align: center;
 }
 /* About Section */
@@ -280,6 +280,7 @@ ul.cat li {
 ol.type li {
     display: inline-block;
     margin-left: 20px;
+    margin-top: 35px;
 }
 ol.type li a {
     color: #a7c44c;
@@ -483,7 +484,7 @@ label {
 }
 /* Footer Section*/
 #footer {
-    background: #333;
+    background: #293133;
     padding: 50px 0 20px 0;
 }
 #footer .social {
