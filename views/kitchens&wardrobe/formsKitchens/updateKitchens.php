@@ -1,5 +1,4 @@
-<?php
-?>
+<?php ?>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -34,7 +33,7 @@
         .btn-clases {
             text-transform: uppercase;
             color: #FFF;
-            background-color: #f56c40;
+            background-color: #062c33;
             border: 0;
             padding: 14px 20px;
             margin: 0;
@@ -44,8 +43,8 @@
             transition: all 0.3s;
         }
         .btn-clases:hover, .btn-clases:focus, .btn-clases.focus, .btn-clases:active, .btn-clases.active {
-            color: #f56c40;
-            background-color: #101010;
+            color: #062c33;
+            background-color: #cccccc;
         }
         .btn-buscar {
             text-transform: uppercase;
@@ -66,95 +65,34 @@
     </style>
     <body style="background-color: transparent">
 
-        <div class="allcontain container">
-            <div class="feturedsection">
-                <h1 class="text-center" style="font-family: 'Bree Serif', serif; font-size: 40px; text-decoration: #000 "> MODIFICAR COCHE</h1>
+        <div class="allcontain container" style="padding: 70px">
+            <div class="text-center" style="font-family: 'Roboto', serif;">
+                <h1 class="text-center" style=" font-size: 45px; text-decoration: #000; font-weight: 600 ">AÑADIR PROYECTO</h1>
                 <br>
                 <hr>
             </div>
-            <form name="formulario1" action="updateCoche.php" method="POST" enctype="multipart/form-data" style="margin-top: 5%; font-family: 'Comfortaa', sans-serif;">
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Identificador<a style="color: red">*</a></label>
-                    <input type="text" class="form-control" id="id" name="id" readonly="readonly" value="<?php echo $info[0]['id'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Código vehiculo<a style="color: red">*</a></label>
-                    <input type="text" class="form-control" id="codigo" name="codigo" readonly="readonly" value="<?php echo $info[0]['codigo'] ?>">
-                </div>
-                <div class="form-group">
+            <form name="formulario1" action="addCoche.php" method="POST" enctype="multipart/form-data" id="uploadForm" style="margin-top: 5%; font-family: 'Comfortaa', sans-serif;">
+                <div class="form-group col-md-6">
                     <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Marca<a style="color: red">*</a></label>
-                    <input type="text" class="form-control" id="nombre" name="marca" required value="<?php echo $info[0]['marca'] ?>">
+                    <input type="text" class="form-control" id="nombre" name="marca" required >
                 </div>
-                <div class="form-group">
+                <div class="form-group col-md-6">
                     <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Modelo<a style="color: red">*</a></label>
-                    <input type="text" class="form-control" id="nombre" name="modelo" required value="<?php echo $info[0]['modelo'] ?>">
+                    <input type="text" class="form-control" id="nombre" name="modelo" required >
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Año de matriculación<a style="color: red">*</a></label>
-                    <input type="text" class="form-control" id="ano" name="ano" required value="<?php echo $info[0]['ano_mat'] ?>">
+                <div class="form-groups col-md-6">
+                    <label for="exampleFormControlFile1" style="font-size: 14px; font-family: 'Comfortaa', fantasy;">Imagen del Coche<a style="color: red">* </a></label>
+                    <input type="file" multiple="" class="form-control-file" id="file-input" name="file-input[]" style="padding-left: 10px"><br>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Kilometros<a style="color: red">*</a></label>
-                    <input type="number" class="form-control" id="kms" name="kms" minlength="0" required value="<?php echo $info[0]['kilometros'] ?>">
+                <div class="col-md-6">
+                    <img id="imgSalida" width="485px" height="300px" src="../../../img/imagen-preview.png"/>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Potencia (cv)<a style="color: red">*</a></label>
-                    <input type="number" class="form-control" id="caballos" name="caballos" minlength="0" required value="<?php echo $info[0]['potencia_cv'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Precio<a style="color: red">*</a></label>
-                    <input type="number" class="form-control" id="precio" name="precio" minlength="0" required value="<?php echo $info[0]['precio'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Tipo de cambio<a style="color: red">*</a></label>
-                    <input type="text" class="form-control"  name="id_extras" required readonly="readonly" value="<?php echo $id_extras[0]['id'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Tipo de cambio<a style="color: red">*</a></label>
-                    <input type="text" class="form-control"  name="cambio" required value="<?php echo $id_extras[0]['cambio'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Tipo de combustible<a style="color: red">*</a></label>
-                    <input type="text" class="form-control" name="combustible" required value="<?php echo $id_extras[0]['combustible'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Deposito<a style="color: red">*</a></label>
-                    <input type="number" class="form-control" name="deposito" minlength="0" required step="any" value="<?php echo $id_extras[0]['deposito'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Número de marchas<a style="color: red">*</a></label>
-                    <input type="number" class="form-control" name="num_marchas" minlength="0" required value="<?php echo $id_extras[0]['num_marchas'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Número de plazas<a style="color: red">*</a></label>
-                    <input type="number" class="form-control" name="num_plazas" minlength="0" required value="<?php echo $id_extras[0]['num_plazas'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Número de puertas<a style="color: red">*</a></label>
-                    <input type="number" class="form-control" name="num_puertas" minlength="0" required value="<?php echo $id_extras[0]['num_puertas'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Tracción<a style="color: red">*</a></label>
-                    <input type="text" class="form-control" name="traccion" minlength="0" required value="<?php echo $id_extras[0]['traccion'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Consumo urbano<a style="color: red">*</a></label>
-                    <input type="number" class="form-control" name="c_urbano" minlength="0" required step="any" value="<?php echo $id_extras[0]['c_urbano'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Consumo medio<a style="color: red">*</a></label>
-                    <input type="number" class="form-control" name="c_medio" minlength="0" required step="any" value="<?php echo $id_extras[0]['c_medio'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Consumo carretera<a style="color: red">*</a></label>
-                    <input type="number" class="form-control" name="c_carretera" minlength="0" required step="any" value="<?php echo $id_extras[0]['c_carretera'] ?>">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Foto de Cabecera<a style="color: red">*</a></label>
-                    <input type="text" class="form-control" name="foto" minlength="0" required step="any" value="<?php echo $info[0]['foto'] ?>">
-                </div>
-                <button class="btn-clases" type="submit" value="Registrar" name="submit" style="margin-top: 20px; padding-bottom: 7px; padding-top: 7px; border-radius: 4px;">Actualizar</button>
+                <button class="btn-clases" type="submit" value="Registrar" name="submit" style="margin-top: 20px; padding-bottom: 7px; padding-top: 7px; border-radius: 4px;">Agregar</button>
             </form>
         </div>
+
+        <script src="cargarimagen.js">
+
+        </script>
     </body>
 </html>

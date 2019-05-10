@@ -61,9 +61,7 @@
             <div class="feturedsection text-center">
                 <h1 class="text-center" style="font-family: 'Bree Serif', serif; font-size: 40px; text-decoration: #000 ">LISTA DE VEHICULOS</h1>
                 <p style="color: #FFF; margin-bottom: 45px; font-size: 20px; color: #f56c40">Lista de vehiculos del concesionario</p>
-                <br>
                 <hr>
-                <br>
             </div>
             <div class="col-md-6">
                 <table class="table">

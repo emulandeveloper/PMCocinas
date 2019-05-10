@@ -70,7 +70,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="formsKitchens/uploadKitchens.php" target="principalView">Subir proyecto</a>
                             <a class="dropdown-item" href="formsKitchens/updateKitchens.php" target="principalView">Editar proyecto</a>
-                            <a class="dropdown-item" href="formsKitchens/deleteKitchens.php" target="principalView">Borrar proyecto</a>
+                            <a class="dropdown-item" href="formsKitchens/listKitchens.php" target="principalView">Borrar proyecto</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown font-menu-dropdown">
@@ -78,9 +78,9 @@
                             Armarios
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Subir proyecto</a>
-                            <a class="dropdown-item" href="#">Editar proyecto</a>
-                            <a class="dropdown-item" href="#">Borrar proyecto</a>
+                            <a class="dropdown-item" href="formsWardrobe/uploadWardrobe.php">Subir proyecto</a>
+                            <a class="dropdown-item" href="formsWardrobe/updateWardrobe.php">Editar proyecto</a>
+                            <a class="dropdown-item" href="formsWardrobe/listWardrobe.php">Borrar proyecto</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown font-menu-dropdown">
