@@ -1,4 +1,7 @@
-<?php ?>
+<?php
+
+
+?>
 
 
 <html lang="en">
@@ -35,7 +38,7 @@
         .btn-clases {
             text-transform: uppercase;
             color: #FFF;
-            background-color: #f56c40;
+            background-color: #062c33;
             border: 0;
             padding: 14px 20px;
             margin: 0;
@@ -45,8 +48,8 @@
             transition: all 0.3s;
         }
         .btn-clases:hover, .btn-clases:focus, .btn-clases.focus, .btn-clases:active, .btn-clases.active {
-            color: #f56c40;
-            background-color: #101010;
+            color: #062c33;
+            background-color: #cccccc;
         }
 
     </style>
@@ -55,12 +58,10 @@
         <div class="allcontain container" style="padding: 70px">
             <div class="text-center" style="font-family: 'Roboto', serif;">
                 <h1 class="text-center" style=" font-size: 45px; text-decoration: #000; font-weight: 600 ">AÑADIR PROYECTO</h1>
-                <p style="color: #FFF; margin-bottom: 45px; font-size: 20px; color: #f56c40">Rellenar el formulario con los datos del Coche a incluir </p>
+                <br>
+                <hr>
             </div>
-
             <form name="formulario1" action="addCoche.php" method="POST" enctype="multipart/form-data" id="uploadForm" style="margin-top: 5%; font-family: 'Comfortaa', sans-serif;">
-
-
                 <div class="form-group col-md-6">
                     <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Marca<a style="color: red">*</a></label>
                     <input type="text" class="form-control" id="nombre" name="marca" required >
@@ -71,10 +72,12 @@
                 </div>
                 <div class="form-groups col-md-6">
                     <label for="exampleFormControlFile1" style="font-size: 14px; font-family: 'Comfortaa', fantasy;">Imagen del Coche<a style="color: red">* </a></label>
-                    <input type="file" multiple="" class="form-control-file" id="file-input" name="file-input[]" style="padding-bottom: 10px; padding-left: 10px; margin-top: 22.5px"><br>
-                    <img id="imgSalida" width="450px" height="300px" src=""/>
+                    <input type="file" multiple="" class="form-control-file" id="file-input" name="file-input[]" style="padding-left: 10px"><br>
                 </div>
-                <button class="btn-clases col-md-6" type="submit" value="Registrar" name="submit" style="margin-top: 20px; padding-bottom: 7px; padding-top: 7px; border-radius: 4px;">Agregar</button>
+                <div class="col-md-6">
+                    <img id="imgSalida" width="485px" height="300px" src="../../../img/imagen-preview.png"/>
+                </div>
+                    <button class="btn-clases" type="submit" value="Registrar" name="submit" style="margin-top: 20px; padding-bottom: 7px; padding-top: 7px; border-radius: 4px;">Agregar</button>
             </form>
         </div>
 

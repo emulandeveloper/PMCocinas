@@ -1,28 +1,27 @@
-<?php 
+<?php
 session_start();
-//require_once './POJOs/Usuario.php';
-//require_once './persistencia/Usuarios.php';
+require_once '../controllers/POJOs/Empleado.php';
+require_once '../controllers/persistencia/Empleados.php';
 
 $submit = filter_input(INPUT_POST, 'submit');
 
-if (isset($submit)){
+if (isset($submit)) {
     $login = $_POST['login'];
-    $password = hash('sha256', $_POST['password']);
+    //$password = hash('sha256', $_POST['password']);
+    $password = $_POST['password'];
     if (isset($login) & isset($password)) {
 
-        $tUsuario = Usuarios::singletonUsuarios();
-        $u = $tUsuario->getLogins($login, $password);
+        $tEmpleado = Empleados::singletonEmpleados();
+        $u = $tEmpleado->getLogins($login, $password);
         if (!is_null($u)) {
-            $_SESSION['login'] = $u->getLogin();
-            $_SESSION['id_empleado'] = $u->getId_empleado();
-            $_SESSION['id_cliente'] = $u->getId_cliente();
-            $_SESSION['tipo'] = $u->getTipo();
-
-            header('Location:viewAdministracion.php');
-            }
-        } else {
-            header('Location:administracion.php? identificado = 1');
+            //$_SESSION['login'] = $u->getLogin();
+        echo "Algo";
+            header('Location:kitchens&wardrobe/viewsAdminK&W.php');
         }
+    } else {
+        var_dump("Estoy marcando algo");
+        header('Location:administracion.php? identificado = 1');
+    }
 }
 ?>
 
@@ -75,7 +74,8 @@ if (isset($submit)){
                 }
             }
             ?>
-                    <form method="post" action="administracion.php" name="formularioIndex">
+                    
+            <form method="post" action="administrador.php" name="formularioIndex">
                 <div class="modal-header" style="color: #414a52; margin-bottom: 5px; margin-top: -15px">
                     <h5 class="modal-title text-center" id="exampleModalLabel" style="font-size: 18px">Acceso Administrador</h5>
                 </div>
@@ -93,13 +93,5 @@ if (isset($submit)){
             </form>
         </div>
 
-        <script type="text/javascript" src="../js/jquery.1.11.1.js"></script> 
-        <script type="text/javascript" src="../js/bootstrap.js"></script> 
-        <script type="text/javascript" src="../js/SmoothScroll.js"></script> 
-        <script type="text/javascript" src="../js/nivo-lightbox.js"></script> 
-        <script type="text/javascript" src="../js/jquery.isotope.js"></script> 
-        <script type="text/javascript" src="../js/jqBootstrapValidation.js"></script> 
-        <script type="text/javascript" src="../js/contact_me.js"></script> 
-        <script type="text/javascript" src="../js/main.js"></script>   
     </body>
 </html>
