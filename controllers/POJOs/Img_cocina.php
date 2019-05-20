@@ -13,16 +13,16 @@
  */
 class Img_cocina {
 
-        private $id;
+    private $id;
     private $id_cocina;
     private $ruta_img;
-    
+
     function __construct($id, $id_cocina, $ruta_img) {
         $this->id = $id;
         $this->id_cocina = $id_cocina;
         $this->ruta_img = $ruta_img;
     }
-    
+
     function getId() {
         return $this->id;
     }
@@ -47,5 +47,5 @@ class Img_cocina {
         $this->ruta_img = $ruta_img;
     }
 
-
 }
+?>

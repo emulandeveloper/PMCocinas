@@ -1,4 +1,14 @@
-<?php ?>
+<?php
+session_start();
+
+
+$submit = filter_input(INPUT_POST, 'submit');
+
+if (isset($submit)) {
+    session_destroy();
+    header('Location:administracion.php');
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,6 +61,16 @@
         .font-menu-dropdown{
             font-size: 19px;
         }
+
+        .exit{
+            color: red;
+            display:block;
+            padding:.5rem 1rem
+        }
+
+        .exit:hover{
+            color: #ff9999
+        }
     </style>
     <body>
         <nav class="navbar navbar-expand-xl navbar-light background-menu">
@@ -78,9 +98,9 @@
                             Armarios
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="formsWardrobe/uploadWardrobe.php">Subir proyecto</a>
-                            <a class="dropdown-item" href="formsWardrobe/updateWardrobe.php">Editar proyecto</a>
-                            <a class="dropdown-item" href="formsWardrobe/listWardrobe.php">Borrar proyecto</a>
+                            <a class="dropdown-item" href="formsWardrobe/uploadWardrobe.php" target="principalView">Subir proyecto</a>
+                            <a class="dropdown-item" href="formsWardrobe/updateWardrobe.php" target="principalView">Editar proyecto</a>
+                            <a class="dropdown-item" href="formsWardrobe/listWardrobe.php" target="principalView">Borrar proyecto</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown font-menu-dropdown">
@@ -93,7 +113,17 @@
                             <a class="dropdown-item" href="#">Borrar Oferta</a>
                         </div>
                     </li>
+                    <li class="nav-item font-menu-dropdown">
+                        <a class="exit" href="#">
+                            Salir
+                        </a>
+                    </li>
                 </ul>
+            </div>
+            <div class="justify-content-end" style="margin-right: 25px; font-size: 25px; color: #0056b3">
+                <a class="fa fa-user">
+                </a>
+                <a style="color: #000; font-size: 20px;">Manuel</a> 
             </div>
         </nav>
         <header>

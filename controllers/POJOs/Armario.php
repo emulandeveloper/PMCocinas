@@ -7,24 +7,26 @@
  */
 
 /**
- * Description of Armarios
+ * Description of Armario
  *
  * @author roman
  */
-class Armarios {
+class Armario {
 
     private $id;
+    private $id_empleado;
     private $cod_armario;
     private $modelo;
-    private $img_armario;
-    private $id_empleado;
+    private $activo;
+ 
     
-    function __construct($id, $cod_armario, $modelo, $img_armario, $id_empleado) {
+    function __construct($id, $id_empleado, $cod_armario, $modelo, $activo) {
         $this->id = $id;
+        $this->id_empleado = $id_empleado;
         $this->cod_armario = $cod_armario;
         $this->modelo = $modelo;
-        $this->img_armario = $img_armario;
-        $this->id_empleado = $id_empleado;
+        $this->activo = $activo;
+        
     }
     
     
@@ -40,8 +42,8 @@ class Armarios {
         return $this->modelo;
     }
 
-    function getImg_armario() {
-        return $this->img_armario;
+    function getActivo() {
+        return $this->activo;
     }
 
     function setId($id) {
@@ -56,8 +58,8 @@ class Armarios {
         $this->modelo = $modelo;
     }
 
-    function setImg_armario($img_armario) {
-        $this->img_armario = $img_armario;
+    function setActivo($activo) {
+        $this->activo = $activo;
     }
     
     function getId_empleado() {

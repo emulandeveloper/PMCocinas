@@ -1,10 +1,53 @@
 <?php
+session_start();
+require_once '../../../controllers/POJOs/Armario.php';
+require_once '../../../controllers/persistencia/Armarios.php';
+require_once '../../../controllers/POJOs/Empleado.php';
+require_once '../../../controllers/persistencia/Empleados.php';
+require_once '../../../controllers/POJOs/Img_armario.php';
+require_once '../../../controllers/persistencia/img_armarios.php';
 
+$submit = filter_input(INPUT_POST, 'submit');
+if (isset($submit)) {
 
+    $tArmario = Armarios::singletonArmarios();
+    $id = $tArmario->getUltimoId();
+    $id_ultimo = str_pad($id, 4, "0", STR_PAD_LEFT);
+    $cod_armario = "war" . $id_ultimo;
+    $modelo = filter_input(INPUT_POST, 'modelo');
+    $activo = 1;
+    $id_empleado = 1;
+
+    $a = new Armario(null, $id_empleado, $cod_armario, $modelo, $activo);
+    $insertado = $tArmario->addArmario($a);
+    if (!empty($insertado)) {
+        
+        $tImg = Img_armarios::singletonImgarmarios();
+        $id_armario = $tArmario->getUltimoId();
+        
+        for ($x = 0; $x < count($_FILES["file0"]["name"]); $x++) {
+            
+            $file = $_FILES["file0"];
+            $nombreF = $file["name"][$x];
+            $tipo = $file["type"][$x];
+            $ruta_provisional = $file["tmp_name"][$x];
+            $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/PDcocinas/img/armarios/';
+
+            $src = $carpeta . $nombreF;
+            move_uploaded_file($ruta_provisional, $src);
+            $ruta_img = '/img/armarios/' . $nombreF;
+            $i = new Img_armario(null, $id_armario, $ruta_img);
+            
+            $insert = $tImg->addImg($i);
+            echo "<p style='color: blue'>Las imágenes se han subida correctamente <p>";
+            
+        }
+        
+    }
+}
 ?>
 
-
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,34 +98,36 @@
     </style>
     <body>
 
-        <div class="allcontain container" style="padding: 70px">
+        <div class="allcontain container" style="padding: 40px">
             <div class="text-center" style="font-family: 'Roboto', serif;">
-                <h1 class="text-center" style=" font-size: 45px; text-decoration: #000; font-weight: 600 ">AÑADIR PROYECTO</h1>
+                <h1 class="text-center" style=" font-size: 45px; text-decoration: #000; font-weight: 600 ">AÑADIR ARMARIOS</h1>
                 <br>
                 <hr>
             </div>
-            <form name="formulario1" action="uploadWardrobe.php" method="POST" enctype="multipart/form-data" id="uploadForm" style="margin-top: 5%; font-family: 'Comfortaa', sans-serif;">
-                <div class="form-group col-md-6">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Marca<a style="color: red">*</a></label>
-                    <input type="text" class="form-control" id="nombre" name="marca" required >
-                </div>
+            <form name="formulario" action="uploadWardrobe.php" method="POST" enctype="multipart/form-data" id="formulario" style="margin-top: 5%; font-family: 'Comfortaa', sans-serif;">
                 <div class="form-group col-md-6">
                     <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Modelo<a style="color: red">*</a></label>
-                    <input type="text" class="form-control" id="nombre" name="modelo" required >
+                    <input type="text" class="form-control" id="modelo" name="modelo" required >
                 </div>
-                <div class="form-groups col-md-6">
-                    <label for="exampleFormControlFile1" style="font-size: 14px; font-family: 'Comfortaa', fantasy;">Imagen del Coche<a style="color: red">* </a></label>
-                    <input type="file" multiple="" class="form-control-file" id="file-input" name="file-input[]" style="padding-left: 10px"><br>
+                <div class="form-groups col-md-6" style="margin-top: 30px">
+                    <label for="exampleFormControlFile1" style="font-size: 14px; font-family: 'Comfortaa', fantasy;">Imágenes<a style="color: red">* </a></label>
+                    <input type="file" class="form-control-file" id="file0" name="file0[]" multiple style="padding-left: 10px"><br>
                 </div>
-                <div class="col-md-6">
-                    <img id="imgSalida" width="485px" height="300px" src="../../../img/imagen-preview.png"/>
-                </div>
-                    <button class="btn-clases" type="submit" value="Registrar" name="submit" style="margin-top: 20px; padding-bottom: 7px; padding-top: 7px; border-radius: 4px;">Agregar</button>
+                <br><br><br><br>
+                <input class="btn-clases" id="btn" type="submit" value="Registrar" name="submit" style="margin-top: 20px; padding-bottom: 7px; padding-top: 7px; border-radius: 4px; margin-left: 15px">
             </form>
         </div>
+        <div class="container center-block">
+            <div id="respuesta">
+                
+            </div>
+            <h3>VISTA PREVIA</h3>
+            <div class="container" id="vista-previa0">
 
+            </div>
+        </div>
         <script src="cargarimagen.js">
-        
+
         </script>
     </body>
 </html>

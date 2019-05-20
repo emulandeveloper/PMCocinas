@@ -14,17 +14,19 @@
 class Cocina {
 
     private $id;
+    private $id_empleado;
     private $cod_cocina;
     private $nombre;
-    private $img_cocina;
-    private $id_empleado;
+    private $modelo;
+    private $activo;
     
-    function __construct($id, $cod_cocina, $nombre, $img_cocina, $id_empleado) {
+    function __construct($id, $id_empleado, $cod_cocina, $nombre, $modelo, $activo) {
         $this->id = $id;
         $this->cod_cocina = $cod_cocina;
         $this->nombre = $nombre;
-        $this->img_cocina = $img_cocina;
+        $this->modelo = $modelo;
         $this->id_empleado = $id_empleado;
+        $this->activo = $activo;
     }
     
     function getId() {
@@ -37,10 +39,6 @@ class Cocina {
 
     function getNombre() {
         return $this->nombre;
-    }
-
-    function getImg_cocina() {
-        return $this->img_cocina;
     }
 
     function getId_empleado() {
@@ -59,13 +57,28 @@ class Cocina {
         $this->nombre = $nombre;
     }
 
-    function setImg_cocina($img_cocina) {
-        $this->img_cocina = $img_cocina;
-    }
-
     function setId_empleado($id_empleado) {
         $this->id_empleado = $id_empleado;
     }
+    
+    function getModelo() {
+        return $this->modelo;
+    }
+
+    function setModelo($modelo) {
+        $this->modelo = $modelo;
+    }
+
+    function getActivo() {
+        return $this->activo;
+    }
+
+    function setActivo($activo) {
+        $this->activo = $activo;
+    }
+
+
+
 
 
 
