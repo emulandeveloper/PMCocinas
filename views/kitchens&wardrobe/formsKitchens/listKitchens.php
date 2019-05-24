@@ -1,4 +1,7 @@
 <?php
+session_start();
+require_once '../../../controllers/POJOs/Cocina.php';
+require_once '../../../controllers/persistencia/Cocinas.php';
 ?>
 <html lang="en">
     <head>
@@ -18,8 +21,16 @@
         <link rel="stylesheet" type="text/css"  href="../../../css/style.css">
         <link rel="stylesheet" type="text/css" href="../../../css/nivo-lightbox/nivo-lightbox.css">
         <link rel="stylesheet" type="text/css" href="../../../css/nivo-lightbox/default.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/util.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/maintable.css">
+        <link rel="icon" type="image/png" href="../../../images/icons/favicon.ico"/>
+        <link rel="stylesheet" type="text/css" href="../../../vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../vendor/animate/animate.css">
+        <link rel="stylesheet" type="text/css" href="../../../vendor/select2/select2.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../vendor/perfect-scrollbar/perfect-scrollbar.css">
         <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
     </head>
     <style>
@@ -56,106 +67,83 @@
             color: #0E76A8;
         }
     </style>
-    <body style="background-color: transparent">
+    <body style="background-color: transparent; overflow: hidden" >
         <div class="allcontain container-fluid">
             <div class="feturedsection text-center">
-                <h1 class="text-center" style="font-family: 'Bree Serif', serif; font-size: 40px; text-decoration: #000 ">LISTA DE VEHICULOS</h1>
-                <p style="color: #FFF; margin-bottom: 45px; font-size: 20px; color: #f56c40">Lista de vehiculos del concesionario</p>
-                <hr>
+                <h1 class="text-center" style="font-family: 'Roboto', serif; font-size: 40px; text-decoration: #000; margin-top: 25px; margin-bottom: 25px">LISTADO DE COCINAS</h1>
+
             </div>
-            <div class="col-md-6">
-                <table class="table">
-                    <h2 class="text-center" style="font-family: 'Bree Serif', serif; font-size: 40px">Activos</h2>
+            <div class="limiter" style="margin-top: -55px">
+                <div class="container-table100">
+                    <div class="wrap-table100">
+                        <div class="table100 ver2 m-b-110">
+                            <div class="table100-head">
+                                <table>
+                                    <thead>
+                                        <tr class="row100 head">
+                                            <th class="cell100 column1">Código Cocina</th>
+                                            <th class="cell100 column2">Modelo</th>
+                                            <th class="cell100 column3">Cliente</th>
+                                            <th class="cell100 column4"></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
 
-                    <thead>
-                        <tr class="text-center" style="background-color: #333; color: #FFF; border-radius: 5px 0px 5px 0px">
-                            <th scope="col">Código</th>
-                            <th scope="col">Marca</th>
-                            <th scope="col">Modelo</th>
-                            <th scope="col">Año de Matriculación</th>
-                            <th scope="col">Kilometros</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody  >
-                        <?php
-                        $tCoche = Automoviles::singletonAutomoviles();
-                        $listCoches = $tCoche->getAllAutos();
+                            <div class="table100-body js-pscroll">
+                                <table>
+                                    <tbody>
+                                        <?php
+                                        $tCocina = Cocinas::singletonCocinas();
+                                        $listaC = $tCocina->getAllCocinas();
 
-                        foreach ($listCoches as $fila) {
-                            ?>
-                            <tr>
-                                <th scope="row" style="padding: 15px; font-weight: 800"><?php echo $fila['codigo'] ?></th>
-                                <th scope="row" style="padding: 15px; color: #f56c40"><?php echo $fila['marca'] ?></th>
-                                <td style="padding: 15px"><?php echo $fila['modelo'] ?></td>
-                                <td style="padding: 15px"><?php echo $fila['ano_mat'] ?></td>
-                                <td style="padding: 15px"><?php echo $fila['kilometros'] ?></td>
-                                <td style="padding: 15px"><?php echo $fila['precio'] ?>&euro;</td>
-                                <td style="padding: 15px">
-                                    <a class="elc-editar" href="updateCoche.php?id=<?php echo $fila['id'] ?>">Editar</a>
-                                </td>
-                                <td style="padding: 15px">
-                                    <a class="elc-borrar" href="deleteAutomovil.php?id=<?php echo $fila['id'] ?>">Borrar</a>
-                                </td>
-                            </tr>
-                            <?php
-                        }
-                        ?>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-6">
-                <table class="table">
-                    <h2 class="text-center" style="font-family: 'Bree Serif', serif; font-size: 40px;">No activos</h2>
-                    <thead>
-                        <tr class="text-center" style="background-color: #333; color: #FFF; border-radius: 5px 0px 5px 0px">
-                            <th scope="col">Código</th>
-                            <th scope="col">Marca</th>
-                            <th scope="col">Modelo</th>
-                            <th scope="col">Año de Matriculación</th>
-                            <th scope="col">Kilometros</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Cliente</th>
-                        </tr>
-                    </thead>
-                    <tbody  >
-                        <?php
-                        require_once '../../POJOs/Automovil.php';
-                        require_once '../../persistencia/Automoviles.php';
-                        require_once '../../POJOs/Cliente.php';
-                        require_once '../../persistencia/Clientes.php';
-
-                        $tCoche = Automoviles::singletonAutomoviles();
-                        $listCoches = $tCoche->getAllAutosBaja();
-                        $tCliente = Clientes::singletonClientes();
-
-                        foreach ($listCoches as $fila) {
-                            $codigoCliente = $tCliente->getCodigoCliente($fila['id']);
-                            ?>
-                            <tr>
-                                <th scope="row" style="padding: 15px; font-weight: 800"><?php echo $fila['codigo'] ?></th>
-                                <th scope="row" style="padding: 15px; color: #f56c40"><?php echo $fila['marca'] ?></th>
-                                <td style="padding: 15px"><?php echo $fila['modelo'] ?></td>
-                                <td style="padding: 15px"><?php echo $fila['ano_mat'] ?></td>
-                                <td style="padding: 15px"><?php echo $fila['kilometros'] ?></td>
-                                <td style="padding: 15px"><?php echo $fila['precio'] ?>&euro;</td>
-                                <td style="padding: 15px"><?php echo $codigoCliente[0]['cod_cliente'] ?>
-                                </td>
-                            </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
+                                        foreach ($listaC as $fila) {
+                                            ?>
+                                            <tr class="row100 body">
+                                                <td class="cell100 column1"><?php echo $fila['cod_cocina']; ?></td>
+                                                <td class="cell100 column2"><?php echo $fila['modelo']; ?></td>
+                                                <td class="cell100 column3"><?php echo $fila['nombre']; ?></td>
+                                                <td class="cell100 column4">
+                                                    <a class="elc-borrar" style="margin-left: -55px" href="deleteKitchens.php?id=<?php echo $fila['id'] ?>">Borrar</a>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <script type="text/javascript" src="../../../js/jquery.1.11.1.js"></script>
+<!--        <script type="text/javascript" src="../../../js/jquery.1.11.1.js"></script>
         <script type="text/javascript" src="../../../js/bootstrap.js"></script>
         <script type="text/javascript" src="../../../js/SmoothScroll.js"></script>
         <script type="text/javascript" src="../../../js/nivo-lightbox.js"></script>
         <script type="text/javascript" src="../../../js/jquery.isotope.js"></script>
         <script type="text/javascript" src="../../../js/jqBootstrapValidation.js"></script>
 
-        <script type="text/javascript" src="../../../js/main.js"></script>
+        <script type="text/javascript" src="../../../js/main.js"></script>-->
+        <script src="../../../vendor/jquery/jquery-3.2.1.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="../../../vendor/bootstrap/js/popper.js"></script>
+        <script src="../../../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="../../../vendor/select2/select2.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="../../../vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script>
+            $('.js-pscroll').each(function () {
+                var ps = new PerfectScrollbar(this);
+
+                $(window).on('resize', function () {
+                    ps.update();
+                })
+            });
+
+
+        </script>
+        <!--===============================================================================================-->
+        <script src="../../../js/maintable.js"></script>
     </body>
 </html>

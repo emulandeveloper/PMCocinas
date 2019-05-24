@@ -11,6 +11,8 @@
  *
  * @author roman
  */
+require_once 'Conexion.php';
+
 class Cocinas {
     
     private static $instance;
@@ -32,9 +34,9 @@ class Cocinas {
         
         try{
             $consulta = "INSERT INTO cocinas "
-                    . "(id, id_empleado, cod_cocina, nombre, modelo, activo) "
+                    . "(id, id_empleado, cod_cocina, nombre, modelo, tipo, activo) "
                     . "values"
-                    . "(null, ?, ?, ?, ?, ?)";
+                    . "(null, ?, ?, ?, ?, ?, ?)";
             
             $query = $this->bd->preparar($consulta);
             
@@ -42,7 +44,8 @@ class Cocinas {
             @$query->bindParam(2, $c->getCod_cocina());
             @$query->bindParam(3, $c->getNombre());
             @$query->bindParam(4, $c->getModelo());
-            @$query->bindParam(5, $c->getActivo());
+            @$query->bindParam(5, $c->getTipo());
+            @$query->bindParam(6, $c->getActivo());
             
             $query->execute();
             
@@ -57,7 +60,36 @@ class Cocinas {
         return $insert;
     }
     
-    public function getUltimoId() {
+    public function getAllCocinas() {
+        try {
+            $consulta = "SELECT * FROM cocinas WHERE activo = 1";
+            
+            $query = $this->bd->preparar($consulta);
+            
+            $query->execute();
+            $tCocinas = $query->fetchAll();
+        } catch (Exception $ex) {
+            
+        }
+        return $tCocinas;
+    }
+    
+    public function borrarCocina($id) {
+
+        try {
+            $consulta = "UPDATE cocinas SET activo=0"
+                    . " WHERE id= $id;";
+            $query = $this->bd->preparar($consulta);
+
+            $query->execute();
+            $baja = true;
+        } catch (Exception $ex) {
+            $baja = false;
+        }
+        return $baja;
+    }
+
+        public function getUltimoId() {
         
         try{
             $consulta = "SELECT MAX(id) as ultimo FROM cocinas";

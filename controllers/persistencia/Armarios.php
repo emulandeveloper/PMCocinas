@@ -35,16 +35,18 @@ class Armarios {
         
         try {
             $consulta = "INSERT INTO armarios"
-                    . " (id, id_empleado, cod_armario, modelo, activo) "
+                    . " (id, id_empleado, cod_armario, modelo, nombre, tipo, activo) "
                     . "values "
-                    . "(null, ?, ?, ?, ?);";
+                    . "(null, ?, ?, ?, ?, ?, ?);";
             
             $query = $this->bd->preparar($consulta);
             
             @$query->bindParam(1, $a->getId_empleado());
             @$query->bindParam(2, $a->getCod_armario());
             @$query->bindParam(3, $a->getModelo());
-            @$query->bindParam(4, $a->getActivo());
+            @$query->bindParam(4, $a->getNombre());
+            @$query->bindParam(5, $a->getTipo());
+            @$query->bindParam(6, $a->getActivo());
             
             $query->execute();
             
@@ -58,6 +60,35 @@ class Armarios {
         }
         
         return $insert;
+    }
+    
+    public function getAllArmarios() {
+        try {
+            $consulta = "SELECT * FROM armarios WHERE activo = 1";
+            
+            $query = $this->bd->preparar($consulta);
+            
+            $query->execute();
+            $tCocinas = $query->fetchAll();
+        } catch (Exception $ex) {
+            
+        }
+        return $tCocinas;
+    }
+    
+    public function borrarArmario($id) {
+
+        try {
+            $consulta = "UPDATE armarios SET activo=0"
+                    . " WHERE id= $id;";
+            $query = $this->bd->preparar($consulta);
+
+            $query->execute();
+            $baja = true;
+        } catch (Exception $ex) {
+            $baja = false;
+        }
+        return $baja;
     }
     
     public function getUltimoId() {

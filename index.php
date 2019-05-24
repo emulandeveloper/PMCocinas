@@ -45,10 +45,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right" style="">
-                        <li><a href="#about" class="page-scroll">About</a></li>
-                        <li><a href="#services" class="page-scroll">Services</a></li>
-                        <li><a href="#portfolio" class="page-scroll">Projects</a></li>
-                        <li><a href="#contact" class="page-scroll">Contact</a></li>
+                        <li><a href="#about" class="page-scroll">Nosotros</a></li>
+                        <li><a href="#services" class="page-scroll">Servicios</a></li>
+                        <li><a href="#portfolio" class="page-scroll">Proyectos</a></li>
+                        <li><a href="#contact" class="page-scroll">Contacto</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse --> 
@@ -106,7 +106,7 @@
                             <h3>Electrodomésticos</h3></a>
                         <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
                     </div>
-                    <div class="col-xs-12 col-sm-4 service"><a href="https://aguarevitalizada.wordpress.com/"> <img src="img/granderfondo.jpg" class="img-responsive" alt="Project Title">
+                    <div class="col-xs-12 col-sm-4 service"><a href="views/viewsWaterGrander.php"> <img src="img/granderfondo.jpg" class="img-responsive" alt="Project Title">
                             <h3>Revitalización Agua Grander</h3></a>
                         <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
                     </div>
@@ -281,9 +281,7 @@
                 <div class="social">
                     <ul>
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="views/administrador.php"><i class="fa fa-user"></i></a></li>
                     </ul>
                 </div>
                 <div>

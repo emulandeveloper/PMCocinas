@@ -14,7 +14,8 @@ if (isset($submit)) {
         $tEmpleado = Empleados::singletonEmpleados();
         $u = $tEmpleado->getLogins($login, $password);
         if (!is_null($u)) {
-            //$_SESSION['login'] = $u->getLogin();
+            $_SESSION['cod_empleado'] = $u->getCod_empleado();
+            $_SESSION['nombre'] = $u->getNombre();
         echo "Algo";
             header('Location:kitchens&wardrobe/viewsAdminK&W.php');
         }

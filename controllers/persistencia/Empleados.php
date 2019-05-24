@@ -54,5 +54,20 @@ class Empleados {
         }
         return $tEmpleado;
     }
+    
+    public function getEmpleado($cod_empleado) {
+        try{
+            $consulta = "SELECT * FROM empleados WHERE "
+                    . "cod_empleado='" . $cod_empleado . "';";
+            
+            $query = $this->bd->preparar($consulta);
+            
+            $query->execute();
+            $tEmpleados = $query->fetchAll();
+        } catch (Exception $ex) {
+
+        }
+        return $tEmpleados;
+    }
 
 }

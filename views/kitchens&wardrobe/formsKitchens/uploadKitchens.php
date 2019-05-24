@@ -17,10 +17,10 @@ if (isset($submit)) {
     $modelo = filter_input(INPUT_POST, 'modelo');
     $nombre = filter_input(INPUT_POST, 'nombre');
     $activo = 1;
+    $tipo_c = 'cocina';
     $id_empleado = 1;
 
-    $c = new Cocina(null, $id_empleado, $cod_cocina, $nombre, $modelo, $activo);
-
+    $c = new Cocina(null, $id_empleado, $cod_cocina, $nombre, $modelo, $tipo_c, $activo);
     $insertado = $tCocina->addCocina($c);
 
     if (!empty($insertado)) {
@@ -107,11 +107,11 @@ if (isset($submit)) {
             </div>
             <form name="formulario" action="uploadKitchens.php" method="POST" enctype="multipart/form-data" id="formulario" style="margin-top: 5%; font-family: 'Comfortaa', sans-serif;">
                 <div class="form-group col-md-6">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Marca<a style="color: red">*</a></label>
+                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Modelo<a style="color: red">*</a></label>
                     <input type="text" class="form-control" id="nombre" name="modelo" required >
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Modelo<a style="color: red">*</a></label>
+                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Nombre<a style="color: red">*</a></label>
                     <input type="text" class="form-control" id="nombre" name="nombre" required >
                 </div>
                 <div class="form-groups col-md-6">

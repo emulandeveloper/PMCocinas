@@ -17,14 +17,18 @@ class Armario {
     private $id_empleado;
     private $cod_armario;
     private $modelo;
+    private $nombre;
+    private $tipo;
     private $activo;
  
     
-    function __construct($id, $id_empleado, $cod_armario, $modelo, $activo) {
+    function __construct($id, $id_empleado, $cod_armario, $modelo, $nombre, $tipo, $activo) {
         $this->id = $id;
         $this->id_empleado = $id_empleado;
         $this->cod_armario = $cod_armario;
         $this->modelo = $modelo;
+        $this->nombre = $nombre;
+        $this->tipo = $tipo;
         $this->activo = $activo;
         
     }
@@ -69,6 +73,24 @@ class Armario {
     function setId_empleado($id_empleado) {
         $this->id_empleado = $id_empleado;
     }
+    
+    function getNombre() {
+        return $this->nombre;
+    }
+
+    function getTipo() {
+        return $this->tipo;
+    }
+
+    function setNombre($nombre) {
+        $this->nombre = $nombre;
+    }
+
+    function setTipo($tipo) {
+        $this->tipo = $tipo;
+    }
+
+
 
 
 

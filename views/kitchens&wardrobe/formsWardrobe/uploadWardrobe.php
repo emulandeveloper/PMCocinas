@@ -15,18 +15,20 @@ if (isset($submit)) {
     $id_ultimo = str_pad($id, 4, "0", STR_PAD_LEFT);
     $cod_armario = "war" . $id_ultimo;
     $modelo = filter_input(INPUT_POST, 'modelo');
+    $nombre = filter_input(INPUT_POST, 'nombre');
     $activo = 1;
+    $tipo_a = 'armario';
     $id_empleado = 1;
 
-    $a = new Armario(null, $id_empleado, $cod_armario, $modelo, $activo);
+    $a = new Armario(null, $id_empleado, $cod_armario, $modelo, $nombre, $tipo_a, $activo);
     $insertado = $tArmario->addArmario($a);
     if (!empty($insertado)) {
-        
+
         $tImg = Img_armarios::singletonImgarmarios();
         $id_armario = $tArmario->getUltimoId();
-        
+
         for ($x = 0; $x < count($_FILES["file0"]["name"]); $x++) {
-            
+
             $file = $_FILES["file0"];
             $nombreF = $file["name"][$x];
             $tipo = $file["type"][$x];
@@ -37,12 +39,10 @@ if (isset($submit)) {
             move_uploaded_file($ruta_provisional, $src);
             $ruta_img = '/img/armarios/' . $nombreF;
             $i = new Img_armario(null, $id_armario, $ruta_img);
-            
+
             $insert = $tImg->addImg($i);
             echo "<p style='color: blue'>Las imágenes se han subida correctamente <p>";
-            
         }
-        
     }
 }
 ?>
@@ -109,7 +109,11 @@ if (isset($submit)) {
                     <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Modelo<a style="color: red">*</a></label>
                     <input type="text" class="form-control" id="modelo" name="modelo" required >
                 </div>
-                <div class="form-groups col-md-6" style="margin-top: 30px">
+                <div class="form-group col-md-6">
+                    <label for="exampleInputEmail1" style="font-size: 14px; font-family: 'Comfortaa', fantasy">Nombre<a style="color: red">*</a></label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required >
+                </div>
+                <div class="form-groups col-md-6">
                     <label for="exampleFormControlFile1" style="font-size: 14px; font-family: 'Comfortaa', fantasy;">Imágenes<a style="color: red">* </a></label>
                     <input type="file" class="form-control-file" id="file0" name="file0[]" multiple style="padding-left: 10px"><br>
                 </div>
@@ -119,7 +123,7 @@ if (isset($submit)) {
         </div>
         <div class="container center-block">
             <div id="respuesta">
-                
+
             </div>
             <h3>VISTA PREVIA</h3>
             <div class="container" id="vista-previa0">

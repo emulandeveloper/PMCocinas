@@ -18,14 +18,16 @@ class Cocina {
     private $cod_cocina;
     private $nombre;
     private $modelo;
+    private $tipo;
     private $activo;
     
-    function __construct($id, $id_empleado, $cod_cocina, $nombre, $modelo, $activo) {
+    function __construct($id, $id_empleado, $cod_cocina, $nombre, $modelo, $tipo, $activo) {
         $this->id = $id;
         $this->cod_cocina = $cod_cocina;
         $this->nombre = $nombre;
         $this->modelo = $modelo;
         $this->id_empleado = $id_empleado;
+        $this->tipo = $tipo;
         $this->activo = $activo;
     }
     
@@ -76,11 +78,13 @@ class Cocina {
     function setActivo($activo) {
         $this->activo = $activo;
     }
-
-
-
-
-
-
     
+    function getTipo() {
+        return $this->tipo;
+    }
+
+    function setTipo($tipo) {
+        $this->tipo = $tipo;
+    }
+   
 }
