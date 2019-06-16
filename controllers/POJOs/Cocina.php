@@ -19,15 +19,17 @@ class Cocina {
     private $nombre;
     private $modelo;
     private $tipo;
+    private $img;
     private $activo;
     
-    function __construct($id, $id_empleado, $cod_cocina, $nombre, $modelo, $tipo, $activo) {
+    function __construct($id, $id_empleado, $cod_cocina, $nombre, $modelo, $tipo, $img, $activo) {
         $this->id = $id;
         $this->cod_cocina = $cod_cocina;
         $this->nombre = $nombre;
         $this->modelo = $modelo;
         $this->id_empleado = $id_empleado;
         $this->tipo = $tipo;
+        $this->img = $img;
         $this->activo = $activo;
     }
     
@@ -86,5 +88,15 @@ class Cocina {
     function setTipo($tipo) {
         $this->tipo = $tipo;
     }
+    
+    function getImg() {
+        return $this->img;
+    }
+
+    function setImg($img) {
+        $this->img = $img;
+    }
+
+
    
 }

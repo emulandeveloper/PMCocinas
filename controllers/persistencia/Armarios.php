@@ -35,9 +35,9 @@ class Armarios {
         
         try {
             $consulta = "INSERT INTO armarios"
-                    . " (id, id_empleado, cod_armario, modelo, nombre, tipo, activo) "
+                    . " (id, id_empleado, cod_armario, modelo, nombre, tipo, img, activo) "
                     . "values "
-                    . "(null, ?, ?, ?, ?, ?, ?);";
+                    . "(null, ?, ?, ?, ?, ?, ?, ?);";
             
             $query = $this->bd->preparar($consulta);
             
@@ -46,7 +46,8 @@ class Armarios {
             @$query->bindParam(3, $a->getModelo());
             @$query->bindParam(4, $a->getNombre());
             @$query->bindParam(5, $a->getTipo());
-            @$query->bindParam(6, $a->getActivo());
+            @$query->bindParam(6, $a->getImg());
+            @$query->bindParam(7, $a->getActivo());
             
             $query->execute();
             

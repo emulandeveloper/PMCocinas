@@ -19,31 +19,42 @@ if (isset($submit)) {
     $activo = 1;
     $tipo_a = 'armario';
     $id_empleado = 1;
+    $img_ruta = $_FILES['file0']['name'];
+    $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/PDcocinas/img/armarios/';
+    $ruta_prov = $_FILES['file0']['tmp_name'];
+    
+    move_uploaded_file($ruta_prov, $carpeta . $img_ruta);
+    
+    $img = "img/armarios/" . $_FILES['file0']['name'];
 
-    $a = new Armario(null, $id_empleado, $cod_armario, $modelo, $nombre, $tipo_a, $activo);
+    $a = new Armario(null, $id_empleado, $cod_armario, $modelo, $nombre, $tipo_a, $img, $activo);
     $insertado = $tArmario->addArmario($a);
-    if (!empty($insertado)) {
-
-        $tImg = Img_armarios::singletonImgarmarios();
-        $id_armario = $tArmario->getUltimoId();
-
-        for ($x = 0; $x < count($_FILES["file0"]["name"]); $x++) {
-
-            $file = $_FILES["file0"];
-            $nombreF = $file["name"][$x];
-            $tipo = $file["type"][$x];
-            $ruta_provisional = $file["tmp_name"][$x];
-            $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/PDcocinas/img/armarios/';
-
-            $src = $carpeta . $nombreF;
-            move_uploaded_file($ruta_provisional, $src);
-            $ruta_img = '/img/armarios/' . $nombreF;
-            $i = new Img_armario(null, $id_armario, $ruta_img);
-
-            $insert = $tImg->addImg($i);
-            echo "<p style='color: blue'>Las imágenes se han subida correctamente <p>";
-        }
+    
+    if (!empty($insertado)){
+         echo "<p style='color: blue'>Las imágenes se han subida correctamente <p>";
     }
+//    if (!empty($insertado)) {
+//
+//        $tImg = Img_armarios::singletonImgarmarios();
+//        $id_armario = $tArmario->getUltimoId();
+//
+//        for ($x = 0; $x < count($_FILES["file0"]["name"]); $x++) {
+//
+//            $file = $_FILES["file0"];
+//            $nombreF = $file["name"][$x];
+//            $tipo = $file["type"][$x];
+//            $ruta_provisional = $file["tmp_name"][$x];
+//            $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/PDcocinas/img/armarios/';
+//
+//            $src = $carpeta . $nombreF;
+//            move_uploaded_file($ruta_provisional, $src);
+//            $ruta_img = '/img/armarios/' . $nombreF;
+//            $i = new Img_armario(null, $id_armario, $ruta_img);
+//
+//            $insert = $tImg->addImg($i);
+//            echo "<p style='color: blue'>Las imágenes se han subida correctamente <p>";
+//        }
+//    }
 }
 ?>
 
@@ -115,16 +126,13 @@ if (isset($submit)) {
                 </div>
                 <div class="form-groups col-md-6">
                     <label for="exampleFormControlFile1" style="font-size: 14px; font-family: 'Comfortaa', fantasy;">Imágenes<a style="color: red">* </a></label>
-                    <input type="file" class="form-control-file" id="file0" name="file0[]" multiple style="padding-left: 10px"><br>
+                    <input type="file" class="form-control-file" id="file0" name="file0" multiple style="padding-left: 10px"><br>
                 </div>
                 <br><br><br><br>
                 <input class="btn-clases" id="btn" type="submit" value="Registrar" name="submit" style="margin-top: 20px; padding-bottom: 7px; padding-top: 7px; border-radius: 4px; margin-left: 15px">
             </form>
         </div>
         <div class="container center-block">
-            <div id="respuesta">
-
-            </div>
             <h3>VISTA PREVIA</h3>
             <div class="container" id="vista-previa0">
 

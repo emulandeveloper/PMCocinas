@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Pedro Moreno e Hijos Cocinas</title>
+        <title>Moreno Cocinas</title>
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -24,6 +24,8 @@
         <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
         <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,7 +64,7 @@
                         <div class="row">
                             <div class="intro-text" style="float: left;">
                                 <h1><img src="img/tituloLogo.png"></h1>
-                                <a href="#about" class="btn btn-custom btn-lg page-scroll">Proyectos</a> 
+                                <a href="#portfolio" class="btn btn-custom btn-lg page-scroll">Proyectos</a> 
                             </div>
                         </div>
                     </div>
@@ -93,16 +95,16 @@
         <div id="services">
             <div class="container">
                 <div class="col-md-10 col-md-offset-1 section-title text-center">
-                    <h2>Our Services</h2>
+                    <h2>Servicios</h2>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
+                    <p>Gama de servicios ofrecidos por Moreno</p>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-4 service"><a href="views/viewsKitchen.php"> <img src="img/residential-design.jpg" class="img-responsive" alt="Project Title">
-                        <h3>Cocinas y Armários</h3></a>
+                    <div class="col-xs-12 col-sm-4 service"><a href="views/viewsKitchen.php"> <img src="img/cocinas.jpg" class="img-responsive" alt="Project Title">
+                            <h3>Cocinas y Armarios</h3></a>
                         <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
                     </div>
-                    <div class="col-xs-12 col-sm-4 service"><a href="views/viewsElectricalAppliance.php"> <img src="img/office-design.jpg" class="img-responsive" alt="Project Title">
+                    <div class="col-xs-12 col-sm-4 service"><a href="views/viewsElectricalAppliance.php"> <img src="img/electrodomesticos.jpg" class="img-responsive" alt="Project Title">
                             <h3>Electrodomésticos</h3></a>
                         <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
                     </div>
@@ -114,159 +116,93 @@
             </div>
         </div>
         <!-- Portfolio Section -->
+
         <div id="portfolio">
-            <div class="container">
+            <div class="container" style="margin-top: -45px">
                 <div class="section-title text-center center">
-                    <h2>Projects</h2>
+                    <h2>Proyectos</h2>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
-                </div>
-                <div class="categories">
-                    <ul class="cat">
-                        <li>
-                            <ol class="type">
-                                <li><a href="#" data-filter="*" class="active">Todos los proyectos</a></li>
-                                <li><a href="#" data-filter=".cocinas">Cocinas</a></li>
-                                <li><a href="#" data-filter=".office">Armarios</a></li>
-                                <li><a href="#" data-filter=".commercial">Otros</a></li>
-                            </ol>
-                        </li>
-                    </ul>
-                    <div class="clearfix"></div>
                 </div>
                 <div class="row">
                     <div class="portfolio-items">
                         <div class="col-sm-6 col-md-4 col-lg-4 cocinas">
                             <div class="portfolio-item">
-                                <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                <div class="hover-bg"> <a href="img/cocinas/perspectiva1.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                         <div class="hover-text">
                                             <h4>COCINAS</h4>
                                         </div>
-                                        <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                                        <img src="img/cocinas/perspectiva1.jpg" class="img-responsive" alt="Project Title"> </a> </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-4 col-lg-4 commercial">
                             <div class="portfolio-item">
-                                <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                <div class="hover-bg"> <a href="img/cocinas/perspectiva2.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                         <div class="hover-text">
                                             <h4>Project Name</h4>
                                         </div>
-                                        <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                                        <img src="img/cocinas/perspectiva2.jpg" class="img-responsive" alt="Project Title"> </a> </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-4 col-lg-4 residential">
                             <div class="portfolio-item">
-                                <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                <div class="hover-bg"> <a href="img/cocinas/perspectiva2.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                         <div class="hover-text">
                                             <h4>Project Name</h4>
                                         </div>
-                                        <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                                        <img src="img/cocinas/perspectiva2.jpg" class="img-responsive" alt="Project Title"> </a> </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-4 col-lg-4 residential">
                             <div class="portfolio-item">
-                                <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                <div class="hover-bg"> <a href="img/cocinas/Cperspectiva1.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                         <div class="hover-text">
                                             <h4>Project Name</h4>
                                         </div>
-                                        <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                                        <img src="img/cocinas/Cperspectiva1.jpg" class="img-responsive" alt="Project Title"> </a> </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-4 col-lg-4 commercial">
                             <div class="portfolio-item">
-                                <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                <div class="hover-bg"> <a href="img/cocinas/Cperspectiva2.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                         <div class="hover-text">
                                             <h4>Project Name</h4>
                                         </div>
-                                        <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                                        <img src="img/cocinas/Cperspectiva2.jpg" class="img-responsive" alt="Project Title"> </a> </div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-4 col-lg-4 office">
                             <div class="portfolio-item">
-                                <div class="hover-bg"> <a href="img/portfolio/06-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+                                <div class="hover-bg"> <a href="img/cocinas/Cperspectiva3.jpg" title="Project Title" data-lightbox-gallery="gallery1">
                                         <div class="hover-text">
                                             <h4>Project Name</h4>
                                         </div>
-                                        <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-4 office">
-                            <div class="portfolio-item">
-                                <div class="hover-bg"> <a href="img/portfolio/07-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                                        <div class="hover-text">
-                                            <h4>Project Name</h4>
-                                        </div>
-                                        <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-4 residential">
-                            <div class="portfolio-item">
-                                <div class="hover-bg"> <a href="img/portfolio/08-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                                        <div class="hover-text">
-                                            <h4>Project Name</h4>
-                                        </div>
-                                        <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-4 commercial">
-                            <div class="portfolio-item">
-                                <div class="hover-bg"> <a href="img/portfolio/09-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                                        <div class="hover-text">
-                                            <h4>Project Name</h4>
-                                        </div>
-                                        <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-4 office">
-                            <div class="portfolio-item">
-                                <div class="hover-bg"> <a href="img/portfolio/10-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                                        <div class="hover-text">
-                                            <h4>Project Name</h4>
-                                        </div>
-                                        <img src="img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-4 office">
-                            <div class="portfolio-item">
-                                <div class="hover-bg"> <a href="img/portfolio/11-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                                        <div class="hover-text">
-                                            <h4>Project Name</h4>
-                                        </div>
-                                        <img src="img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-4 residential">
-                            <div class="portfolio-item">
-                                <div class="hover-bg"> <a href="img/portfolio/12-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                                        <div class="hover-text">
-                                            <h4>Project Name</h4>
-                                        </div>
-                                        <img src="img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                                        <img src="img/cocinas/Cperspectiva3.jpg" class="img-responsive" alt="Project Title"> </a> </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Contact Section -->
         <div id="contact">
             <div class="container">
                 <div class="section-title text-center">
                     <h2>Datos de contacto</h2>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
                 </div>
                 <div class="col-md-4">
-                    <h3>Contact Info</h3>
+                    <h3>Contacto de Información</h3>
                     <div class="contact-item"> <span>Dirección</span>
                         <p>Calle Vespasiano, 1<br>Mérida (Badajoz)
-                            </p>
+                        </p>
                     </div>
                     <div class="contact-item"> <span>Correo</span>
-                        <p>contacto</p>
+                        <p>morenococinas.info@gmail.com</p>
+                      <p>informacion@morenococinas.es</p>
                     </div>
                     <div class="contact-item"> <span>Teléfono</span>
-                        <p>telefono de contacto</p>
+                        <p>630 29 16 29</p>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -285,7 +221,7 @@
                     </ul>
                 </div>
                 <div>
-                    <p>&copy; 2016 NEST. All rights reserved. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
+                    <p>Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
                 </div>
             </div>
         </div>
@@ -297,5 +233,12 @@
         <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
         <script type="text/javascript" src="js/contact_me.js"></script> 
         <script type="text/javascript" src="js/main.js"></script>
+    <!--        <script>
+            $(' .openBtn ').on('click', function () {
+                $(' .modal-body ').load('viewGallery.php', function () {
+                    $(' #myModal ').modal({show: true});
+                });
+            });
+        </script>-->
     </body>
 </html>

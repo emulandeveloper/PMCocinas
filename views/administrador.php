@@ -20,8 +20,7 @@ if (isset($submit)) {
             header('Location:kitchens&wardrobe/viewsAdminK&W.php');
         }
     } else {
-        var_dump("Estoy marcando algo");
-        header('Location:administracion.php? identificado = 1');
+        header('Location:administracion.php?identificado = 1');
     }
 }
 ?>
@@ -60,9 +59,9 @@ if (isset($submit)) {
             <![endif]-->
     </head>
     <body style="background-color: #fff">
-        <div class="card container" style="width: 38rem; margin-top: 200px; ">
+        <div class="card container" style="width: 38rem; margin-top: 200px; "><a href="../index.php">
             <img class="card-img-top" src="../img/logo_complet.png" alt="Card image cap" style="padding: 10px 10px 20px 10px; margin-left: 85px">
-
+            </a>
             <?php
             /* @var $_GET type */
             if (isset($_GET['identificado'])) {

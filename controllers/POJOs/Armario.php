@@ -19,16 +19,18 @@ class Armario {
     private $modelo;
     private $nombre;
     private $tipo;
+    private $img;
     private $activo;
  
     
-    function __construct($id, $id_empleado, $cod_armario, $modelo, $nombre, $tipo, $activo) {
+    function __construct($id, $id_empleado, $cod_armario, $modelo, $nombre, $tipo, $img, $activo) {
         $this->id = $id;
         $this->id_empleado = $id_empleado;
         $this->cod_armario = $cod_armario;
         $this->modelo = $modelo;
         $this->nombre = $nombre;
         $this->tipo = $tipo;
+        $this->img = $img;
         $this->activo = $activo;
         
     }
@@ -89,6 +91,16 @@ class Armario {
     function setTipo($tipo) {
         $this->tipo = $tipo;
     }
+    
+    function getImg() {
+        return $this->img;
+    }
+
+    function setImg($img) {
+        $this->img = $img;
+    }
+
+
 
 
 

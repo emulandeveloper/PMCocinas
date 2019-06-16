@@ -242,13 +242,12 @@ header .intro-text {
 #servicesK {
     padding: 120px 0;
 }
-/*#servicesK .service {
+#servicesK .service {
     padding-left: 40px;
-}*/
+}
 #servicesK img {
     width: 400px;
     border-radius: 75px 0 75px 0;
-    box-shadow: 5px 0 #2c435f;
 }
 #servicesK h3 {
     padding: 10px 0;

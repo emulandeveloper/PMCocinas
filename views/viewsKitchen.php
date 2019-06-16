@@ -60,23 +60,22 @@
                     <br>
                     <h2>Cocinas y armarios</h2>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
                 </div>
                 <div class="row" style="padding: 150px">
-                    <div class="col-xs-12 col-md-12 service" style="padding: 25px"><a href="../#portfolio"><img src="../img/cocinas.jpg" class="col-md-6 imagen img-responsive" alt="Project Title">
+                    <div class="col-xs-12 col-md-12 service" style="padding: 25px">
+                        <a href="../#portfolio"><img src="../img/cocinas.jpg" class="col-md-6 imagen img-responsive" alt="Project Title"></a>
                         <div class="col-md-1"></div>
                         <div class="col-md-5">
                             <h3>Cocinas</h3></a>
-                            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. 
-                                Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
+
                         </div>
                     </div>
-                    <div class="col-xs-12 col-md-12 service" style="padding: 25px"><a href="../#portfolio"><img src="../img/armario.jpg" class="col-md-6 imagen img-responsive" alt="Project Title">
+                    <div class="col-xs-12 col-md-12 service" style="padding: 25px">
+                        <a href="../#portfolio"><img src="../img/armario.jpg" class="col-md-6 imagen img-responsive" alt="Project Title"></a>
                         <div class="col-md-1"></div>
-                        <div class="col-md-5">
+                        <div class="col-md-5" style="margin-top: -25px">
                             <h3>Armarios</h3></a>
-                            <p>Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. 
-                                Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend.</p>
+
                         </div>
                     </div>
                 </div>
@@ -88,19 +87,19 @@
                 <div class="section-title text-center">
                     <h2>Datos de contacto</h2>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
                 </div>
                 <div class="col-md-4">
-                    <h3>Contact Info</h3>
+                    <h3>Contacto de información</h3>
                     <div class="contact-item"> <span>Dirección</span>
                         <p>Calle Vespasiano, 1<br>Mérida (Badajoz)
                         </p>
                     </div>
                     <div class="contact-item"> <span>Correo</span>
-                        <p>contacto</p>
+                        <p>morenococinas.info@gmail.com</p>
+                      <p>informacion@morenococinas.es</p>
                     </div>
                     <div class="contact-item"> <span>Teléfono</span>
-                        <p>telefono de contacto</p>
+                        <p>630 29 16 29</p>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -115,13 +114,10 @@
                 <div class="social">
                     <ul>
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
                     </ul>
                 </div>
                 <div>
-                    <p>&copy; 2016 NEST. All rights reserved. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
+                    <p>Designed by <a href="http://www.templatewire.com" rel="nofollow">EmulanDev</a></p>
                 </div>
             </div>
         </div>

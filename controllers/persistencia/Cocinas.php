@@ -34,9 +34,9 @@ class Cocinas {
         
         try{
             $consulta = "INSERT INTO cocinas "
-                    . "(id, id_empleado, cod_cocina, nombre, modelo, tipo, activo) "
+                    . "(id, id_empleado, cod_cocina, nombre, modelo, tipo, img, activo) "
                     . "values"
-                    . "(null, ?, ?, ?, ?, ?, ?)";
+                    . "(null, ?, ?, ?, ?, ?, ?, ?);";
             
             $query = $this->bd->preparar($consulta);
             
@@ -45,10 +45,11 @@ class Cocinas {
             @$query->bindParam(3, $c->getNombre());
             @$query->bindParam(4, $c->getModelo());
             @$query->bindParam(5, $c->getTipo());
-            @$query->bindParam(6, $c->getActivo());
+            @$query->bindParam(6, $c->getImg());
+            @$query->bindParam(7, $c->getActivo());
             
             $query->execute();
-            
+            var_dump($query);
             $insert = true;
 
         } catch (Exception $ex) {

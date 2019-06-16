@@ -13,38 +13,48 @@ if (isset($submit)) {
     $tCocina = Cocinas::singletonCocinas();
     $id = $tCocina->getUltimoId();
     $id_ultimo = str_pad($id, 4, "0", STR_PAD_LEFT);
-    $cod_cocina = "kit" . $id_ultimo;
+    $cod_cocina = "kits" . $id_ultimo;
     $modelo = filter_input(INPUT_POST, 'modelo');
     $nombre = filter_input(INPUT_POST, 'nombre');
     $activo = 1;
     $tipo_c = 'cocina';
     $id_empleado = 1;
+    $img_ruta = $_FILES['file0']['name'];
+    $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/PDcocinas/img/cocinas/';
+    $ruta_prov = $_FILES['file0']['tmp_name'];
+    
+    move_uploaded_file($ruta_prov, $carpeta . $img_ruta);
+    
+    $img = "img/cocinas/" . $_FILES['file0']['name'];
 
-    $c = new Cocina(null, $id_empleado, $cod_cocina, $nombre, $modelo, $tipo_c, $activo);
+    $c = new Cocina(null, $id_empleado, $cod_cocina, $nombre, $modelo, $tipo_c, $img, $activo);
     $insertado = $tCocina->addCocina($c);
 
-    if (!empty($insertado)) {
-        $tImg = Img_cocinas::singletonImgcocinas();
-        $id_cocina = $tCocina->getUltimoId();
-
-        for ($x = 0; $x < count($_FILES["file0"]["name"]); $x++) {
-
-            $file = $_FILES["file0"];
-            $nombreF = $file["name"][$x];
-            $tipo = $file["type"][$x];
-            $ruta_provisional = $file["tmp_name"][$x];
-            $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/PDcocinas/img/cocinas/';
-
-            $src = $carpeta . $nombreF;
-            move_uploaded_file($ruta_provisional, $src);
-            $ruta_img = '/img/cocinas/' . $nombreF;
-            $i = new Img_cocina(null, $id_cocina, $ruta_img);
-            
-            $insert = $tImg->addImg($i);
-            
-        }
-        echo "<p style='color: blue'>Las imágenes se han subida correctamente <p>";
+    if (!empty($insertado)){
+         echo "<p style='color: blue'>Las imágenes se han subida correctamente <p>";
     }
+
+//    if (!empty($insertado)) {
+//        $tImg = Img_cocinas::singletonImgcocinas();
+//        $id_cocina = $tCocina->getUltimoId();
+//
+//        for ($x = 0; $x < count($_FILES["file0"]["name"]); $x++) {
+//
+//            $file = $_FILES["file0"];
+//            $nombreF = $file["name"][$x];
+//            $tipo = $file["type"][$x];
+//            $ruta_provisional = $file["tmp_name"][$x];
+//            $carpeta = $_SERVER['DOCUMENT_ROOT'] . '/PDcocinas/img/cocinas/';
+//
+//            $src = $carpeta . $nombreF;
+//            move_uploaded_file($ruta_provisional, $src);
+//            $ruta_img = '/img/cocinas/' . $nombreF;
+//            $i = new Img_cocina(null, $id_cocina, $ruta_img);
+//            
+//            $insert = $tImg->addImg($i);
+//            
+//        }
+       
 }
 ?>
 
@@ -116,16 +126,13 @@ if (isset($submit)) {
                 </div>
                 <div class="form-groups col-md-6">
                     <label for="exampleFormControlFile1" style="font-size: 14px; font-family: 'Comfortaa', fantasy;">Imágenes<a style="color: red">* </a></label>
-                    <input type="file" class="form-control-file" id="file0" name="file0[]" multiple style="padding-left: 10px"><br>
+                    <input type="file" class="form-control-file" id="file0" name="file0" style="padding-left: 10px"><br>
                 </div>
                 <br>
                 <input class="btn-clases" id="btn" type="submit" value="Registrar" name="submit" style="margin-top: 20px; padding-bottom: 7px; padding-top: 7px; border-radius: 4px;">
             </form>
         </div>
         <div class="container center-block">
-            <div id="respuesta">
-                
-            </div>
             <h3>VISTA PREVIA</h3>
             <div class="container" id="vista-previa0">
 
